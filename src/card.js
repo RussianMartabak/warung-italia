@@ -12,5 +12,15 @@ export default function card(title, image, price, desc) {
     img.classList.add('img');
     element.appendChild(img);
 
+    const priceElement = document.createElement('p');
+    priceElement.textContent = `Rp ${price}`;
+    priceElement.classList.add('price')
+    element.appendChild(priceElement);
+
+    const descElement = document.createElement('p');
+    descElement.textContent = desc;
+    descElement.classList.add('desc');
+    element.appendChild(descElement);
+
     return element;
 }
